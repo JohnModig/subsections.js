@@ -23,4 +23,4 @@ Client side component for websites.
 ### History
 
 * Originally created for: www.skysparc.com
-* Originan polyfill: [iamdustan/smoothscroll](https://github.com/iamdustan/smoothscroll)
+* Original polyfill: [iamdustan/smoothscroll](https://github.com/iamdustan/smoothscroll)
