@@ -31,7 +31,7 @@ function _subSections() {
         }
         return p;
     };
-   this.browserSupportsScrollBehaviour = false;
+    this.browserSupportsScrollBehaviour = false;
     this.useScroll = true;
     this.scrollTo = function (el) {
         if (!this.useScroll) {
