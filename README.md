@@ -6,15 +6,21 @@ Client side component for websites.
 
 * Show or hide sections of a page.
 * Based on links.
-* Automatically scroll to section, if 
+* Automatically scroll to section, if needed.
 
 ### Technology
 
-* Languages: css, javascript.
+* Languages: scss, javascript.
 * No dependencies.
 * Polyfill to get wider support for smooth scroll effect.
-* IE8+ (scroll: IE9+, smooth scroll: IE10+ with polyfill).
+
+### Browser support
+
+* IE8+
+* Scroll: IE9+
+* Smooth scroll: IE10+ with polyfill.
 
 ### History
 
 * Originally created for: www.skysparc.com
+* Polyfill: [iamdustan/smoothscroll](https://github.com/iamdustan/smoothscroll)
