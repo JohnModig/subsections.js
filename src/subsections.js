@@ -1,5 +1,7 @@
 /* -------------------------
 
+   subsections.js
+
    https://github.com/JohnModig/subsections.js
 
 -------------------------*/
@@ -39,7 +41,7 @@ function _subSections() {
         }
         var pos = el.getBoundingClientRect();
         var nav = document.querySelector("nav");
-        var navHeight = window.getComputedStyle(nav).position === 'fixed' ? nav.clientHeight : 0;
+        var navHeight = nav !== null && window.getComputedStyle(nav).position === 'fixed' ? nav.clientHeight : 0;
         if (pos.top < navHeight) {
             var scrollTop = parseInt(pos.top + window.pageYOffset - navHeight);
             if (isNaN(scrollTop)) {
@@ -119,7 +121,6 @@ function _subSections() {
                 else {
                     subSections.hide(this.getAttribute('data-section-id'));
                 }
-                subSections.callback(this);
                 return false;
             }
         }
