@@ -1,0 +1,49 @@
+/*-------------------------------------------------------------*\
+    subsection.js
+
+    https://github.com/JohnModig/subsections.js
+\*-------------------------------------------------------------*/
+
+div.sub-section {
+position: absolute;
+top: 0;
+background-color: white;
+min-height: 100%;
+width: 100%;
+left: 0;
+box-sizing: border-box;
+padding: inherit;
+z-index: -1;
+transition: transform 0.4s;
+    &.opened {
+    z-index: 1;
+    transform: scale(1);
+    }
+    &.hidden {
+    transform: scale(0.5);
+    }
+	a.close {
+    position: absolute;
+    right: 30px;
+    vertical-align: bottom;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 1;
+        &:after {
+        content: '\2297';
+        display: inline-block;
+        margin: 0 0 0 0.25em;
+        font-size: 26px;
+        line-height: 26px;
+        vertical-align: bottom;
+        }
+        @media screen and (max-width: 599px) {
+        right: 10px;
+        margin-top: -4px;
+        background: inherit;
+        padding: 10px;
+        border-bottom-left-radius: 10px;
+        }
+	}
+}
