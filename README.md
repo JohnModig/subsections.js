@@ -24,3 +24,10 @@ Client side component for websites.
 
 * Originally created for: www.skysparc.com
 * Original polyfill: [iamdustan/smoothscroll](https://github.com/iamdustan/smoothscroll)
+
+### Demos
+
+* [https://johnmodig.github.io/subsections.js/demo/1-Modal.html](Modal)
+* [https://johnmodig.github.io/subsections.js/demo/2-Individual.html](Individual)
+* [https://johnmodig.github.io/subsections.js/demo/3-Single.html](Single)
+* [https://johnmodig.github.io/subsections.js/demo/4-SVG.html](SVG)
