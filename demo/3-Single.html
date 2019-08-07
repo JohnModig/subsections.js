@@ -48,5 +48,36 @@
 
 <script src="../src/subsections.js"></script>
 
+<script>
+subSections.extend = function(link){
+
+// Get the section
+var section = document.getElementById(link.getAttribute('data-section-id'));
+
+// Open or close?
+var isOpen = section.className.indexOf('opened') >= 0;
+
+// Close other open sections (make exclusive)
+if(isOpen) {
+var sections = document.querySelectorAll('div.sub-section.opened');
+for(var i = 0; i < sections.length; i++) {
+if (sections[i] !== section) {
+subSections.hide(sections[i]);
+}
+}
+}
+
+}
+
+// Attach event
+(function () {
+var links = document.querySelectorAll('a[data-section-id]');
+for (var i = 0; i < links.length; i++) { 
+links[i].addEventListener('click', function(e) { subSections.extend(e.currentTarget); });
+}
+})();
+
+</script>
+
 </body>
 </html>
