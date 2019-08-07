@@ -71,7 +71,7 @@ subSections.hide(sections[i]);
 (function () {
 var links = document.querySelectorAll('a[data-section-id]');
 for (var i = 0; i < links.length; i++) { 
-links[i].addEventListener('click', function(e) { alert(this); alert(e.currentTarget); subSections.extend(e.currentTarget); });
+  links[i].addEventListener('click', function(e) { alert(this); alert(e.currentTarget); });
 }
 })();
 
