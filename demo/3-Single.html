@@ -61,7 +61,6 @@ if(isOpen) {
   for(var i = 0; i < sections.length; i++) {
     if (sections[i] !== section) {
       subSections.hide(sections[i]);
-      document.querySelector('a[data-section-id=' + sections[i].id + ']').firstElementChild.setAttribute('fill', closeColor);
     }
   }
 }
