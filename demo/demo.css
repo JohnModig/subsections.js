@@ -1,0 +1,37 @@
+/* Styles for demo pages */
+
+* {
+font-family: sans-serif;
+}
+html, body {
+margin: 0;
+padding: 0;
+background-color: white;
+h2 {
+margin: 0;
+padding: 0;
+color: #333;
+}
+p {
+margin: 0 0 1em 0;
+padding: 0;
+color: #333;
+}
+a {
+color: dodgerblue;
+text-decoration: none;
+font-weight: bold;
+}
+a:hover, a:focus {
+color: royalblue;
+}
+main {
+background-color: white;
+padding: 40px;
+}
+div.demo {
+position: relative;
+min-height: 8em;
+border: 1px dashed #ccc;
+padding: 40px;
+}
