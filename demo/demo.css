@@ -4,7 +4,8 @@ font-family: sans-serif;
 html, body {
 margin: 0;
 padding: 0;
-background-color: red;
+background-color: white;
+}
 h2 {
 margin: 0;
 padding: 0;
@@ -26,6 +27,7 @@ color: royalblue;
 main {
 background-color: white;
 padding: 40px;
+min-height: 100%;
 }
 div.demo {
 position: relative;
