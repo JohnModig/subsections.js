@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo</title>
+  <link rel="stylesheet" href="../src/subsections.css" />
+  <link rel="stylesheet" href="demo.css" />
+</head>
+<body>
+
+<main>
+
+<h1>SVG</h1>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="160" xmlns:xlink="http://www.w3.org/1999/xlink">
+  
+  <a href="#" data-section-id="section1" data-open-color="#00ff00"><circle class="shape shape--one" r="65" cx="75" cy="75" fill="#0000ff"></circle></a>
+  
+  <a href="#" data-section-id="section2" data-open-color="#00fff0"><circle class="shape shape--two" transform="translate(65 0)" r="65" cx="75" cy="75" fill="#0000ff"></circle></a>
+
+<a href="#" data-section-id="section3"data-open-color="#ffff00"><circle class="shape shape--three" transform="translate(130 0)" r="65" cx="75" cy="75" fill="#0000ff"></circle></a>
+
+</svg>
+
+<div class="demo">
+
+<div id="section1" class="sub-section"><h2>Section1</h2></div>
+
+<div id="section2" class="sub-section"><h2>Section2</h2></div>
+
+<div id="section3" class="sub-section"><h2>Section3</h2></div>
+
+</div>
+
+</main>
+
+<script src="../src/subsections.js"></script>
+
+<script>
+subSections.extend = function (link){
+
+// Get the section
+var section = document.getElementById(link.getAttribute('data-section-id'));
+
+// Open or close?
+var isOpen = section.className.indexOf('opened') >= 0;
+
+// Close other open sections (make exclusive)
+if(isOpen) {
+  var sections = document.querySelectorAll('div.sub-section.opened');
+  for(var i = 0; i < sections.length; i++) {
+    if (sections[i] !== section) {
+      subSections.hide(sections[i]);
+    }
+  }
+}
+
+// Change fill color
+var openColor = link.getAttribute('data-open-color');
+var closeColor = link.getAttribute('data-close-color');
+if(isOpen) {
+link.firstElementChild.setAttribute('fill', openColor);
+}
+else {
+link.firstElementChild.setAttribute('fill', closeColor);
+}
+
+};
+
+// Set attributes and attach event
+(function () {
+  var links = document.querySelectorAll('a[data-section-id]');
+  for (var i = 0; i < links.length; i++) { 
+    links[i].setAttribute('data-close-color', links[i].firstElementChild.getAttribute('fill'));
+    links[i].addEventListener('click', function(e) { subSections.extend(e.currentTarget); });
+  }
+})();
+</script>
+
+</body>
+</html>
