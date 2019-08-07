@@ -49,7 +49,9 @@
 <script>
 // Attach event
 (function () {
-alert("x");
+var links = document.querySelectorAll('a[data-section-id]');
+for (var i = 0; i < links.length; i++) { 
+links[i].addEventListener('click', function(e) { alert(e.currentTarget); });
 })();
 </script>
 
