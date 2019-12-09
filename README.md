@@ -22,7 +22,7 @@ Client side component for websites.
 
 ### History
 
-* Originally created for: www.skysparc.com
+* Originally created for: skysparc.com
 * Original polyfill: [iamdustan/smoothscroll](https://github.com/iamdustan/smoothscroll)
 
 ### Demos
