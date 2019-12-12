@@ -22,7 +22,7 @@ Client side component for websites.
 
 ### History
 
-* Originally created for: www.skysparc.com
+* Originally created for: skysparc.com
 * Original polyfill: [iamdustan/smoothscroll](https://github.com/iamdustan/smoothscroll)
 
 ### Demos
@@ -31,3 +31,8 @@ Client side component for websites.
 * [Individual](https://johnmodig.github.io/subsections.js/demo/2-Individual.html)
 * [Single](https://johnmodig.github.io/subsections.js/demo/3-Single.html)
 * [SVG](https://johnmodig.github.io/subsections.js/demo/4-SVG.html)
+
+### In production
+
+* https://www.skysparc.com/about#our-leadership (Modal)
+* https://www.skysparc.com/support#overview-section1 (Individual)
